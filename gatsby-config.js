@@ -5,5 +5,19 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    "title" : "Full-stack Bootcamp",
+    "author" : "Sayid Haidar"
+  },
+  plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'src', 
+        path: `${__dirname}/src/`
+      }
+    }
+  ]
 }
