@@ -1,6 +1,7 @@
 import cns from "@sindresorhus/class-names"
 import React, { useState } from "react"
 import { graphql, Link, StaticQuery } from "gatsby"
+import "../styles/index.scss"
 
 const routes = [
   { name: "Home", route: "/" },
