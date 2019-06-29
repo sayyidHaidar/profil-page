@@ -1,21 +1,20 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
-const contactPage = () => {
+const aboutePage = () => {
   return (
     <>
-      <Head title="Contact" />
+      <Head title="About" />
       <Layout>
         <section className="hero">
           <div className="hero-body">
             <div className="container">
-              <h1>Contact Page</h1>
+              <h1>Aboute Page</h1>
+              <p>I'm a intovert boy</p>
               <p>
-                check my code in{" "}
-                <a href="https://github.com/savyd" target="_blank">
-                  Github
-                </a>
+                wana see me? <Link to="/contact">Contact me.</Link>
               </p>
             </div>
           </div>
@@ -25,4 +24,4 @@ const contactPage = () => {
   )
 }
 
-export default contactPage
+export default aboutePage

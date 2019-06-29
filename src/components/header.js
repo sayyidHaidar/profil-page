@@ -1,43 +1,106 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import cns from "@sindresorhus/class-names"
+import React, { useState } from "react"
+import { graphql, Link, StaticQuery } from "gatsby"
 
-import headerStyle from "./header.module.scss"
+const routes = [
+  { name: "Home", route: "/" },
+  { name: "Blog", route: "/blog" },
+  { name: "About", route: "/about" },
+  { name: "Contact", route: "/contact" },
+  { name: "Store", route: "/store" },
+]
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const [navState, setNavState] = useState(false)
+  const toggleNavState = event => {
+    event.preventDefault()
+    setNavState(!navState)
+  }
+
+  const activeClass = { "is-active": navState }
+  const burgerClass = cns("navbar-burger", "burger", activeClass)
+  const navMenuClass = cns("navbar-menu", "has-text-centered", activeClass)
 
   return (
-    <header className={headerStyle.header}>
-      <h1>
-        <Link to="/" className={headerStyle.title}>
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyle.navList}>
-          <li>
-            <Link className={headerStyle.navItem} activeClassName={headerStyle.activeNavItem} to="/">Home</Link>
-          </li>
-          <li>
-            <Link className={headerStyle.navItem} activeClassName={headerStyle.activeNavItem} to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link className={headerStyle.navItem} activeClassName={headerStyle.activeNavItem} to="/aboute">Aboute</Link>
-          </li>
-          <li>
-            <Link className={headerStyle.navItem} activeClassName={headerStyle.activeNavItem} to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <StaticQuery
+        query={graphql`
+          {
+            img: file(relativePath: { eq: "LogoHimi.png" }) {
+              childImageSharp {
+                fixed(height: 60) {
+                  src
+                  srcSet
+                }
+              }
+            }
+          }
+        `}
+        render={data => (
+          <nav className="navbar">
+            <div className="navbar-brand">
+              <div className="is-padding-horizontal" />
+
+              <img {...data.img.childImageSharp.fixed} />
+              <div className="is-margin-vertikal is-brand-himi">
+                <div className="content">
+                  <b>Himpunan Mahasiswi</b>
+                  <br />
+                  <b>Persatuan Islam</b>
+                </div>
+              </div>
+              <a
+                role="button"
+                className={burgerClass}
+                onClick={toggleNavState}
+                onKeyPress={toggleNavState}
+                tabIndex={0}
+              >
+                <span aria-hidden="true" />
+                <span aria-hidden="true" />
+                <span aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className={navMenuClass}>
+              <div className="navbar-end">
+                {routes.map(({ name, route }) => (
+                  <Link
+                    to={route}
+                    className="navbar-item"
+                    key={name}
+                    activeClassName="is-active"
+                  >
+                    {name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="is-padding-horizontal" />
+          </nav>
+        )}
+      />
+      <style jsx>{`
+        img {
+          margin: auto;
+          padding: auto;
+          margin-right: 0.5rem;
+          margin-left: 0;
+          padding-left: 0;
+        }
+        .is-margin-vertikal {
+          margin-top: 3px;
+          margin-bottom: 3px;
+        }
+
+        @media (min-width: 648px) {
+          .is-padding-horizontal {
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+        }
+      `}</style>
+    </>
   )
 }
 
