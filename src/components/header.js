@@ -7,7 +7,7 @@ const routes = [
   { name: "Home", route: "/" },
   { name: "Blog", route: "/blog" },
   { name: "About", route: "/about" },
-  { name: "Contact", route: "/contact" },
+  { name: "Event", route: "/event" },
   { name: "Store", route: "/store" },
 ]
 

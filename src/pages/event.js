@@ -10,7 +10,7 @@ const contactPage = () => {
         <section className="hero">
           <div className="hero-body">
             <div className="container">
-              <h1>Contact Page</h1>
+              <h1>Event Page</h1>
               <p>
                 check my code in{" "}
                 <a href="https://github.com/savyd" target="_blank">
