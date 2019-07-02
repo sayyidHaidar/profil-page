@@ -19,8 +19,6 @@ const blogPage = () => {
     }
   `)
 
-  console.log(data)
-
   return (
     <>
       <Head title="Blog" />
