@@ -4,11 +4,9 @@ import { graphql, Link, StaticQuery } from "gatsby"
 import "../styles/index.scss"
 
 const routes = [
-  { name: "Home", route: "/" },
   { name: "Blog", route: "/blog" },
+  { name: "Socials", route: "/socials" },
   { name: "About", route: "/about" },
-  { name: "Event", route: "/event" },
-  { name: "Store", route: "/store" },
 ]
 
 const Header = () => {
@@ -27,9 +25,9 @@ const Header = () => {
       <StaticQuery
         query={graphql`
           {
-            img: file(relativePath: { eq: "LogoHimi.png" }) {
+            img: file(relativePath: { eq: "Profil-logo.png" }) {
               childImageSharp {
-                fixed(height: 60) {
+                fixed(height: 50) {
                   src
                   srcSet
                 }
@@ -43,13 +41,9 @@ const Header = () => {
               <div className="is-padding-horizontal" />
 
               <img {...data.img.childImageSharp.fixed} />
-              <div className="is-margin-vertikal is-brand-himi">
-                <div className="content">
-                  <b>Himpunan Mahasiswi</b>
-                  <br />
-                  <b>Persatuan Islam</b>
-                </div>
-              </div>
+              <Link to="/" className="navbar-item">
+                <b>Sayid Haidar</b>
+              </Link>
               <a
                 role="button"
                 className={burgerClass}

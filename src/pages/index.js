@@ -19,15 +19,13 @@ const indexPage = ({ data }) => {
               />
             </figure>
             <article className="content">
-            <h1 className="title is-marginless">
-              Himpunan Mahasiswi Persatuan Islam
-            </h1>
-            <br />
-            <p>
-              I am a software engineer from Surabaya, Indonesia. Love working on
-              web technologies like Laravel, Node.js, React, and Vue. Currently
-              working on my bachelor thesis and Nine Twenty One.
-            </p>
+              <h1 className="title is-marginless">I'm Sayid Haidar, a Full-stack Developer</h1>
+              <br />
+              <p>
+                I am a software engineer from Surabaya, Indonesia. Love working
+                on web technologies like Laravel, Node.js, React, and Vue.
+                Currently working on my bachelor thesis and Nine Twenty One.
+              </p>
             </article>
           </div>
         </div>
@@ -59,7 +57,7 @@ export default indexPage
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "LogoHimi.png" }) {
+    file(relativePath: { eq: "Profil-logo.png" }) {
       childImageSharp {
         fixed(height: 300) {
           ...GatsbyImageSharpFixed

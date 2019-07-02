@@ -16,9 +16,21 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'images',
+        name: `Profil-page`,
+        short_name: `Profil`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/logo.svg`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },

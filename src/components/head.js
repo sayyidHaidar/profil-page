@@ -3,7 +3,7 @@ import {Helmet} from "react-helmet"
 
 const Head = ({ title, children }) => {
     return (
-        <Helmet title={`${title}`}>
+        <Helmet title={`Sayid Haidar | ${title}`}>
             {children}
         </Helmet>
     )
