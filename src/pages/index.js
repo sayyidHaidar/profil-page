@@ -19,12 +19,13 @@ const indexPage = ({ data }) => {
               />
             </figure>
             <article className="content">
-              <h1 className="title is-marginless">I'm Sayid Haidar, a Full-stack Developer</h1>
+              <h1 className="title is-marginless">
+                Hey there, I'm Sayid Haidar.
+              </h1>
               <br />
               <p>
                 I am a software engineer from Surabaya, Indonesia. Love working
-                on web technologies like Laravel, Node.js, React, and Vue.
-                Currently working on my bachelor thesis and Nine Twenty One.
+                on web technologies like Laravel, Node.js, React.
               </p>
             </article>
           </div>

@@ -5,7 +5,6 @@ import "../styles/index.scss"
 
 const routes = [
   { name: "Blog", route: "/blog" },
-  { name: "Socials", route: "/socials" },
   { name: "About", route: "/about" },
 ]
 
@@ -36,7 +35,7 @@ const Header = () => {
           }
         `}
         render={data => (
-          <nav className="navbar">
+          <nav className="navbar has-background-warning">
             <div className="navbar-brand">
               <div className="is-padding-horizontal" />
 
