@@ -7,7 +7,7 @@ import Head from "../components/head"
 const indexPage = ({ data }) => {
   return (
     <>
-      <Head title="Home" />
+      <Head title="Sayid Haidar" />
       <section className="hero is-fullheight">
         <Header />
         <div className="hero-body has-background-warning">
@@ -20,7 +20,7 @@ const indexPage = ({ data }) => {
             </figure>
             <article className="content">
               <h1 className="title is-marginless">
-                Hey there, I'm Sayid Haidar.
+                I'm Sayid Haidar.
               </h1>
               <br />
               <p>
@@ -58,9 +58,9 @@ export default indexPage
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "Profil-logo.png" }) {
+    file(relativePath: { eq: "sayid.jpg" }) {
       childImageSharp {
-        fixed(height: 300) {
+        fixed(height: 200) {
           ...GatsbyImageSharpFixed
         }
       }

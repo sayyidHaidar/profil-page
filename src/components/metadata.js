@@ -1,0 +1,80 @@
+import {
+    faDev,
+    faGithub,
+    faGitlab,
+    faFacebookF,
+    faInstagram,
+    faMediumM,
+    faTelegram,
+    faTwitter,
+    faYoutube,
+    faLinkedinIn,
+  } from '@fortawesome/free-brands-svg-icons'
+  
+  export default {
+  links: [
+      {
+        id: 'Facebook',
+        href: 'https://fb.me/sayid.ab.3',
+        classFontAwesome: faFacebookF,
+        color: '#3b5998',
+        isPrimary: true,
+      },
+      {
+        id: 'GitHub',
+        href: 'https://github.com/savyd',
+        classFontAwesome: faGithub,
+        color: '#25292e',
+        isPrimary: true,
+      },
+      {
+        id: 'GitLab',
+        href: 'https://gitlab.com/sayid.haidar',
+        classFontAwesome: faGitlab,
+        color: '#fa6d34',
+        isPrimary: false,
+      },
+      {
+        id: 'Instagram',
+        href: 'https://instagram.com/sayidhidar',
+        classFontAwesome: faInstagram,
+        color: '#e1306c',
+        isPrimary: false,
+      },
+      {
+        id: 'Linkedin',
+        href: 'https://www.linkedin.com/in/sayyid-abdul-aziz-3a9230146',
+        classFontAwesome: faLinkedinIn,
+        color: '#0e76a8',
+        isPrimary: true,
+      },
+      {
+        id: 'Medium',
+        href: 'https://medium.com/@sayid.haidar',
+        classFontAwesome: faMediumM,
+        color: '#00ab6c',
+        isPrimary: false,
+      },
+      {
+        id: 'Telegram',
+        href: 'https://t.me/savyd',
+        classFontAwesome: faTelegram,
+        color: '#0088cc',
+        isPrimary: false,
+      },
+      {
+        id: 'Youtube',
+        href: 'https://www.youtube.com/channel/UCBgQEV0T05LEJotdOZLtV1w',
+        classFontAwesome: faYoutube,
+        color: '#c4302b',
+        isPrimary: true,
+      },
+      {
+        id: 'dev.to',
+        href: 'https://dev.to/savyd',
+        classFontAwesome: faDev,
+        color: '#0a0a0a',
+        isPrimary: true,
+      },
+    ],
+  }

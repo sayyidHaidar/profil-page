@@ -4,7 +4,9 @@ import { graphql, Link, StaticQuery } from "gatsby"
 import "../styles/index.scss"
 
 const routes = [
+  { name: "Home", route: "/" },
   { name: "Blog", route: "/blog" },
+  { name: "Socials", route: "/socials" },
   { name: "About", route: "/about" },
 ]
 
